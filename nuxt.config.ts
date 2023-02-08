@@ -1,7 +1,14 @@
+
 export default defineNuxtConfig({
   ssr: false,
   srcDir: "./",
-  css: ["@/assets/css/main.css"],
+  css: [
+    "@/assets/css/main.css",
+    // "@/assets/css/_table.css",
+    // "@/assets/css/_scrollbars.css",
+    // "@/assets/css/_progress.css",
+    // "@/assets/css/_checkbox-radio-switch.css",
+  ],
 
   experimental: { payloadExtraction: false },
 
@@ -19,6 +26,7 @@ export default defineNuxtConfig({
 
   modules: [
     // ...
+
     [
       "@pinia/nuxt",
       {
@@ -30,15 +38,19 @@ export default defineNuxtConfig({
         ],
       },
     ],
-    ["@vueuse/nuxt"],
+    "@vueuse/nuxt",
   ],
-  //buildModules: ["@pinia/nuxt"],
+  // buildModules: [
+  //   "@pinia/nuxt"],
   alias: {
     "./runtimeConfig": "./runtimeConfig.browser",
   },
 
   //
-  plugins: [{ src: "@/plugins/amplify.ts", mode: "client" }],
+  plugins: [
+    { src: "@/plugins/amplify.ts", mode: "client" }
+
+  ],
   vite: {
     // temp-fix for dev, it breaks build for now (see: https://github.com/nuxt/framework/issues/4916)
     define: {
@@ -46,16 +58,14 @@ export default defineNuxtConfig({
       "window.global": {},
     },
   },
-
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-
-  build: {},
-
+  build: {
+  },
   // target: "static"
 });
 

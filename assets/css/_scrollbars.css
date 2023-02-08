@@ -1,5 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
-  html {
+  /* html {
     scrollbar-width: thin;
     scrollbar-color: rgb(16, 18, 23) rgb(249, 250, 251);
   }
@@ -7,23 +11,23 @@
   body::-webkit-scrollbar {
     width: 8px;
     height: 8px;
-  }
+  } */
 
-  body::-webkit-scrollbar-track {
+  /* body::-webkit-scrollbar-track {
     @apply bg-gray-50;
-  }
+  } */
 
-  body::-webkit-scrollbar-thumb {
+  /* body::-webkit-scrollbar-thumb {
     @apply bg-gray-700 rounded;
-  }
+  } */
 
-  body::-webkit-scrollbar-thumb:hover {
+  /* body::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-600;
-  }
+  } */
 }
 
 @layer utilities {
-  .dark-scrollbars-compat {
+  /* .dark-scrollbars-compat {
     scrollbar-color: rgb(2, 7, 14) rgb(30, 41, 59);
   }
 
@@ -37,5 +41,5 @@
 
   .dark-scrollbars::-webkit-scrollbar-thumb:hover {
     @apply bg-slate-600;
-  }
+  } */
 }

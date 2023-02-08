@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer components {
     .checkbox, .radio, .switch {
       @apply inline-flex items-center cursor-pointer relative;
